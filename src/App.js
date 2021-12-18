@@ -1,8 +1,9 @@
 // import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Home from './pages/Home/Home';
+import News from './pages/News/News';
 
 import mockData from './MOCK_DATA.json';
 
@@ -35,17 +36,23 @@ const App = () => {
   const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
 
   return (
-    <div>
-      <Header />
-      <Home
-        paginate={paginate}
-        currentPage={currentPage}
-        data={currentPosts}
-        postsPerPage={postsPerPage}
-        totalPosts={data.length}
-      />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              paginate={paginate}
+              currentPage={currentPage}
+              data={currentPosts}
+              postsPerPage={postsPerPage}
+              totalPosts={data.length}
+            />
+          }
+        />
+        <Route path="news" element={<News />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

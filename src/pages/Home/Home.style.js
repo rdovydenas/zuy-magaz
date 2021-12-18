@@ -8,3 +8,8 @@ export const Container = styled.div`
   border-radius: 10px;
   padding-bottom: 80px;
 `;
+
+export const Background = styled.div`
+  width: 100vw;
+  height: 100%;
+`;

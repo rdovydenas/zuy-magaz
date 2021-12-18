@@ -5,4 +5,5 @@ export const H1 = styled.h1`
   font-weight: 400;
   font-size: 40px;
   padding-top: 20px;
+  margin-bottom: 40px;
 `;

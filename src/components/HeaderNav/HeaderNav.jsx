@@ -5,11 +5,11 @@ import Menu from '../Menu/Menu';
 const HeaderNav = () => {
   return (
     <S.HeaderNav>
-      <Menu title="NAUJIENOS" />
-      <Menu title="APYRANKĖS" />
-      <Menu title="KAROLIUKAI" />
-      <Menu title="DOVANOS" />
-      <Menu title="NUOLAIDOS" />
+      <Menu title="NAUJIENOS" link="/news" />
+      <Menu title="APYRANKĖS" link="/bracelets" />
+      <Menu title="KAROLIUKAI" link="/beads" />
+      <Menu title="DOVANOS" link="/gifts" />
+      <Menu title="NUOLAIDOS" link="/discounts" />
     </S.HeaderNav>
   );
 };

@@ -33,9 +33,13 @@ export const Container = styled.div`
 `;
 
 export const LeftSide = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 100%;
   @media (max-width: 991px) {
+    display: block;
     width: 100%;
   }
 `;
@@ -82,7 +86,8 @@ export const Image = styled.img`
 
 export const Price = styled.p`
   font-size: 30px;
-  text-align: left;
+  text-align: right;
+  margin-right: 40px;
   margin-top: 10%;
   @media (max-width: 991px) {
     text-align: right;

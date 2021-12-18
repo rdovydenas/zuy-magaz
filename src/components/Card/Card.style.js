@@ -19,6 +19,7 @@ export const CardInfo = styled.div`
 `;
 
 export const Card = styled.div`
+  background: white;
   position: relative;
   align-items: center;
   display: flex;

@@ -1,10 +1,11 @@
 import React from 'react';
+
 import * as S from './Menu.style';
 
-const Menu = ({ title }) => {
+const Menu = ({ title, link }) => {
   return (
     <S.MenuLi>
-      <S.Text>{title}</S.Text>
+      <S.StyledLink to={link}>{title}</S.StyledLink>
     </S.MenuLi>
   );
 };

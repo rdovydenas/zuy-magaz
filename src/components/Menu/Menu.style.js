@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const MenuLi = styled.li`
@@ -7,14 +8,16 @@ export const MenuLi = styled.li`
   text-align: center;
 `;
 
-export const Text = styled.p`
+export const StyledLink = styled(Link)`
   position: relative;
-  top: 10px;
+  text-decoration: none;
+  color: black;
+  top: 28px;
   font-size: 20px;
   font-weight: 400;
   cursor: pointer;
   @media (max-width: 700px) {
-    top: 23px;
+    top: 30px;
     font-size: 11px;
   }
 `;
