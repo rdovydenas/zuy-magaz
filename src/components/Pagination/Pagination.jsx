@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as S from './Pagination.style';
 
 const Pagination = ({ postsPerPage, totalPosts, currentPage, paginate }) => {
@@ -12,7 +13,7 @@ const Pagination = ({ postsPerPage, totalPosts, currentPage, paginate }) => {
       <S.Navigation>
         <S.Ul>
           {pageNumbers.map((number) => (
-            <S.Li>
+            <S.Li key={number}>
               <S.Link
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -27,6 +28,13 @@ const Pagination = ({ postsPerPage, totalPosts, currentPage, paginate }) => {
       </S.Navigation>
     </S.Container>
   );
+};
+
+Pagination.propTypes = {
+  postsPerPage: PropTypes.number,
+  totalPosts: PropTypes.number,
+  currentPage: PropTypes.number,
+  paginate: PropTypes.func,
 };
 
 export default Pagination;

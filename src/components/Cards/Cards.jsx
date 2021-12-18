@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as S from './Cards.style';
 import Card from '../Card/Card';
 
@@ -17,6 +18,10 @@ const Cards = ({ data }) => {
         ))}
     </S.CardsContainer>
   );
+};
+
+Cards.propTypes = {
+  data: PropTypes.array,
 };
 
 export default Cards;

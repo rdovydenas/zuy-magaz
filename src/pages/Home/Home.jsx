@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as S from './Home.style';
 
 import H1 from '../../components/Heading/Heading';
@@ -18,6 +19,14 @@ const Home = ({ data, postsPerPage, totalPosts, currentPage, paginate }) => {
       />
     </S.Container>
   );
+};
+
+Home.propTypes = {
+  data: PropTypes.array,
+  postsPerPage: PropTypes.number,
+  totalPosts: PropTypes.number,
+  currentPage: PropTypes.number,
+  paginate: PropTypes.func,
 };
 
 export default Home;

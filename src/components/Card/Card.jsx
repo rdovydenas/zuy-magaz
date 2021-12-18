@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import CardModal from '../CardModal/CardModal';
 import * as S from './Card.style';
 
@@ -26,6 +27,13 @@ const Card = ({ image, title, price, description }) => {
       )}
     </>
   );
+};
+
+Card.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.string,
+  price: PropTypes.number,
+  description: PropTypes.string,
 };
 
 export default Card;

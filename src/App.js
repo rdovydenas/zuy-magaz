@@ -1,8 +1,10 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
+
+import mockData from './MOCK_DATA.json';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -12,13 +14,14 @@ const App = () => {
   //Fetch data
 
   useEffect(() => {
-    const getData = async () => {
-      const result = await axios(
-        'https://61a27a4b014e1900176de951.mockapi.io/category'
-      );
-      setData(result.data);
-    };
-    getData();
+    // const getData = async () => {
+    //   const result = await axios(
+    //     'https://61a27a4b014e1900176de951.mockapi.io/category'
+    //   );
+    //   setData(result.data);
+    // };
+    // getData();
+    setData(mockData);
   }, []);
 
   //Paginate
